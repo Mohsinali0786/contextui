@@ -5,10 +5,6 @@ function Home() {
     return (
         <>
             <SideMenu />
-
-
-
-
         </>
     )
 }

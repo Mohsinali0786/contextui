@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -58,14 +60,121 @@
 }
 
 .site-layout .site-layout-background {
-  background: #fff;
+  /* background: #fff; */
 }
 
+.ant-layout-header{
+  width:80px !important;
+  padding: 0px !important;
+}
+
+.sidemenuheader{
+  display:flex ;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+.headerHeading{
+  color: white;
+  font-size: 4vh;
+  padding-top: 5%;
+}
+.headeroicon{
+  color:white;
+  font-size:20px;
+}
 .cards-div{
 
   display:flex !important;
-  justify-content: center;
   margin-top: 10px;
-  /* justify-content:space-evenly !important;
-  flex-wrap: wrap !important; */
+  padding: 10px;
+  /* background-color: #282c34; */
+}
+
+
+#cards{
+  width: 23%;
+  height: 150px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card-width-3{
+  width:33%;
+  height: 300px;
+  max-height: 300px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+.site-layout{
+  background-color: rgb(33, 33, 33) !important;
+}
+
+.ant-progress-circle{
+  width: 50%;
+  position: relative;
+  top:10px;
+  left:-6px;
+  /* text-align: center; */
+}
+.ant-progress-text{
+  color: white !important;
+  margin-top: 20px !important;
+  font-size: 80% !important;
+  position: absolute !important;
+  top:17px !important;
+  left:57px !important;
+}
+
+.cardcontent{
+  display: flex;
+  align-items: center;
+}
+.databox-Card{  
+  width:10px; 
+  height:10px;
+  background-color: #61dafb;
+}
+.totalfiles-Card{
+  display: flex;
+  color: white;
+  align-items:baseline;
+}
+.totalfiles-Card>*{
+  color: white;
+}
+.totalfiles-Card>h4{
+  margin-left:5px ; 
+}
+.tables >*{
+  background-color: black ;
+}
+
+.recentfiles-header{
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: row; */
+}
+.recentfiles-header>input{
+  background-color: #282c34;
+  border-radius: 100px;
+  color: white;
+  width:56%;
+  height:30px;
+  padding:5px;
+}
+.recentfiles-header>input::placeholder{
+  color: white;
+}
+.MuiTableCell-root{
+  color: white !important;
+}
+@media only screen and (max-width: 600px) {
+  #cards,.card-width-3 {
+    width: 90%;
+  }
 }

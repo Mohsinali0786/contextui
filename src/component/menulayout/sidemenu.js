@@ -11,7 +11,17 @@ import Card from './card';
 import { Stack } from '@mui/material';
 import 'antd/dist/antd.css'
 import PrimarySearchAppBar from './header'
-
+import TableRowsIcon from '@mui/icons-material/TableRows';
+import CardTable from './cardtable'
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeIcon from '@mui/icons-material/Home';
+import DonutSmallIcon from '@mui/icons-material/DonutSmall';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import FilterVintageIcon from '@mui/icons-material/FilterVintage';
+import LanIcon from '@mui/icons-material/Lan';
+import Chart from '../chart'
+import LinerChart from '../linerchart,';
 
 const { Header, Sider, Content } = Layout;
 
@@ -19,49 +29,98 @@ function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-      
-            <Header
-              className="site-layout-background"
-              style={{
-                color:'white',
-                fontSize:25
-              }}
-            >
-              {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                className: 'trigger',
-                onClick: () => setCollapsed(!collapsed),
-              })}
-            </Header>
-        <h1 style={{color:'white'}}>HHHHH</h1>
+      <Sider trigger={null} collapsible collapsed={collapsed} width={!collapsed ? '150px' : '50px'}>
+        <Header
+          className="site-layout-background"
+          style={{
+            color: 'white',
+            fontSize: 15,
+            width: '80px'
+          }}
+        >
+          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+            className: 'trigger',
+            onClick: () => {
+              setCollapsed(!collapsed)
+
+            }
+          })}
+        </Header>
+        Hello
 
 
         <div className="logo" />
+        <div className='sidemenuheader'>
+              {/* <TableRowsIcon className='headeroicon' />
+              <h1 className='headerHeading'>Context</h1> */}
+            </div>
         <Menu
           theme="dark"
           mode="inline"
           defaultSelectedKeys={['1']}
           items={[
             {
+              key:'0',
+              icon:!collapsed?<TableRowsIcon className='headeroicon' />:"",
+              label:!collapsed?<h1 className='headerHeading'>Context</h1>:"",
+            },
+            
+            {
               key: '1',
-              icon: <UserOutlined />,
-              label: 'nav 1',
+              icon: <DashboardIcon />,
+              label: 'DASHBOARD',
             },
             {
               key: '2',
-              icon: <VideoCameraOutlined />,
-              label: 'nav 2',
+              icon: <HomeIcon />,
+              label: 'Home',
             },
             {
               key: '3',
-              icon: <UploadOutlined />,
-              label: 'nav 3',
+              icon: <DonutSmallIcon />,
+              label: 'Analytics',
+            },
+            {
+              key: '4',
+              icon: <TableRowsIcon />,
+              label: 'Data',
+            },
+            {
+              key: '5',
+              icon: <DonutSmallIcon />,
+              label: 'Flow Designer',
+            },
+            {
+              key: '6',
+              icon: <AutoGraphIcon />,
+              label: 'Graphs',
+            },
+            {
+              key: '7',
+              icon: <AccountTreeIcon />,
+              label: 'Project Alert',
+            },
+            {
+              key: '8',
+              icon: <FilterVintageIcon />,
+              label: 'Project Activities',
+            },
+            {
+              key: '9',
+              icon: <LanIcon />,
+              label: 'Project Workflow',
+            },
+            {
+              key: '10',
+              icon: <DonutSmallIcon />,
+              label: 'Web Archieves',
             },
           ]}
-          />
+        />
       </Sider>
+      
       <Layout className="site-layout">
-        <PrimarySearchAppBar/>
+        <PrimarySearchAppBar />
         <Content
           className="site-layout-background"
           style={{
@@ -69,19 +128,21 @@ function SideMenu() {
             padding: 24,
             minHeight: 280,
           }}
-          >
+        >
           <Stack className='cards-div' direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card title='Number Of Files' myclass='cards' />
+            <Card title='Number of Insights' myclass='cards' />
+            <Card title='Times Saved' myclass='cards' />
+            <LinerChart />
+            {/* <Card title='Recently Activities' myclass='cards'/> */}
           </Stack>
           <Stack className='cards-div' direction={{ xs: 'column', sm: 'row' }}
             spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Card />
-            <Card />
-            <Card />
+            <CardTable title='Recent Files' heading1='Project' heading2='Time' />
+            <CardTable title='Apps' heading1='Total Files' heading2='Last Uploaded' />
+            {/* <CardTable title='Active Collaborators' /> */}
+            <Chart />
           </Stack>
         </Content>
       </Layout>
