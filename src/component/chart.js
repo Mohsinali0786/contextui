@@ -72,7 +72,7 @@ const Chart = () => {
   };
   return(
     <Box
-    className='cards card-width-3'
+    className='cards card-width-3 graphbox'
     sx={{
       // width: 300,
       //   {
@@ -85,10 +85,7 @@ const Chart = () => {
       //   },
       // height: 170,
       backgroundColor: 'black',
-      '&:hover': {
-        backgroundColor: 'primary.main',
-        opacity: [0.9, 0.8, 0.7],
-      },
+
     }}
   >
 

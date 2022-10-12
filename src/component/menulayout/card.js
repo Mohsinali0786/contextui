@@ -1,9 +1,10 @@
 import { Box } from "@mui/material"
 import { Progress } from 'antd';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import SquareIcon from '@mui/icons-material/Square';
 
 function Card(props) {
-  const {title,myclass}=props
+  const { title, myclass, content1, content2 } = props
 
 
   return (
@@ -22,31 +23,35 @@ function Card(props) {
         //   },
         // height: 170,
         backgroundColor: 'black',
-        '&:hover': {
-          backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
+
       }}
     >
-      <h3 style={{ color: 'white' }}>{title}</h3>
+      <h4 >{title}</h4>
       <div className="cardcontent">
-        <Progress type="circle" percent={75} strokeWidth='6' />
-        <div className="progress-report">
-          {/* HHHH */}
-          <div className="totalfiles-Card">
-            <div className="databox-Card"></div>
-            <h4>User File</h4>
-          </div>
-          <div className="totalfiles-Card">
-            <div className="databox-Card" style={{backgroundColor:'gray'}}></div>
-            <h4>Total Files</h4>
-          </div>
-          <div className="totalfiles-Card">
-            <p>75%</p>
-            <ArrowDropUpIcon style={{color:'lightgreen',position:'relative', top:'10px'}}/>
-          </div>
 
+        <div className="progressDiv">
+
+          <Progress
+            type="circle"
+            percent={75}
+            strokeWidth='6'
+            width='100'
+          />
         </div>
+          <div className="progress-report-parent-div">
+            <div className="progress-report">
+              <SquareIcon sx={{color:'lightblue'}} />
+              <p style={{color:'white'}}>{content1}</p>
+            </div>
+            <div className="progress-report">
+              <SquareIcon sx={{color:'lightblue'}}/>
+              <p style={{color:'white'}}>{content2}</p>
+            </div>
+            <div style={{display:'flex'}}>
+              <p style={{color:'white'}}>75%</p>
+              <ArrowDropUpIcon sx={{color:'green'}}/>  
+            </div>
+          </div>
       </div>
 
 

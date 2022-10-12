@@ -9,8 +9,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import SearchIcon from '@mui/icons-material/Search';
+// import { makeStyles } from '@material-ui/core/styles';
+
 
 function createData(firstname,projectname,date) {
+
+
   return { firstname, projectname, date };
 }
 
@@ -29,10 +33,7 @@ export default function cardtable(props) {
     sx={{
     // overflow:'scroll',
       backgroundColor: 'black',
-      '&:hover': {
-        backgroundColor: 'primary.main',
-        opacity: [0.9, 0.8, 0.7],
-      },
+ 
     }}
   >
     <div className='recentfiles-header'>
@@ -64,7 +65,7 @@ export default function cardtable(props) {
       </tr>
     </table> */}
     <TableContainer component={Paper} className='tables'>
-      <Table sx={{ minWidth: 200 }} aria-label="simple table">
+      <Table sx={{ minWidth: 330 }} aria-label="simple table" >
         <TableHead>
           <TableRow>
             <TableCell>File Name</TableCell>

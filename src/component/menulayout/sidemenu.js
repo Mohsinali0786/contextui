@@ -22,6 +22,9 @@ import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 import LanIcon from '@mui/icons-material/Lan';
 import Chart from '../chart'
 import LinerChart from '../linerchart,';
+// import {Divider} from '@mui/material';
+import Divider from '@mui/material/Divider';
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -35,7 +38,7 @@ function SideMenu() {
           style={{
             color: 'white',
             fontSize: 15,
-            width: '80px'
+            width: collapsed?'80px':'150px'
           }}
         >
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
@@ -46,25 +49,20 @@ function SideMenu() {
             }
           })}
         </Header>
-        Hello
 
 
         <div className="logo" />
         <div className='sidemenuheader'>
-              {/* <TableRowsIcon className='headeroicon' />
-              <h1 className='headerHeading'>Context</h1> */}
-            </div>
+          {!collapsed ? <TableRowsIcon className='headeroicon' /> : ""}
+           { !collapsed ? 
+           <h1 className='headerHeading'>Context</h1> : ""}
+        </div>
+           {!collapsed?<Divider className='divider'/>:""}
         <Menu
           theme="dark"
           mode="inline"
           defaultSelectedKeys={['1']}
           items={[
-            {
-              key:'0',
-              icon:!collapsed?<TableRowsIcon className='headeroicon' />:"",
-              label:!collapsed?<h1 className='headerHeading'>Context</h1>:"",
-            },
-            
             {
               key: '1',
               icon: <DashboardIcon />,
@@ -117,28 +115,32 @@ function SideMenu() {
             },
           ]}
         />
+
+
       </Sider>
-      
-      <Layout className="site-layout">
+
+      <Layout className="site-layout" style={{marginLeft:!collapsed?'150px':'80px'}}>
         <PrimarySearchAppBar />
         <Content
           className="site-layout-background"
           style={{
-            margin: '24px 16px',
-            padding: 24,
+            // margin: '24px 16px',
+            padding: 10,
             minHeight: 280,
           }}
         >
           <Stack className='cards-div' direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Card title='Number Of Files' myclass='cards' />
-            <Card title='Number of Insights' myclass='cards' />
-            <Card title='Times Saved' myclass='cards' />
-            <LinerChart />
+            // spacing={{ xs: 1, sm: 2, md: 4 }}
+            >
+            <Card title='Number Of Files' content1='User Files' content2='Total Files' myclass='cards' />
+            <Card title='Number of Insights' content1='Insights Generated' content2='Artifact Processed' myclass='cards' />
+            <Card title='Times Saved' content1='Time Saved' content2='Time'myclass='cards' />
+            <LinerChart style={{width:'40%'}}/>
             {/* <Card title='Recently Activities' myclass='cards'/> */}
           </Stack>
           <Stack className='cards-div' direction={{ xs: 'column', sm: 'row' }}
-            spacing={{ xs: 1, sm: 2, md: 4 }}>
+            // spacing={{ xs: 1, sm: 2, md: 4 }}
+            >
             <CardTable title='Recent Files' heading1='Project' heading2='Time' />
             <CardTable title='Apps' heading1='Total Files' heading2='Last Uploaded' />
             {/* <CardTable title='Active Collaborators' /> */}

@@ -51,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '70ch',
     },
   },
 }));
@@ -119,14 +119,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
+      
       <MenuItem>
         <IconButton
           size="large"
@@ -156,17 +149,22 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{backgroundColor:'black'}}>
+      <AppBar position="static" sx={{ backgroundColor: 'black',height:'55px' }}>
         <Toolbar>
-        
+
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            HELLO DOE
+            <div>
+              <p style={{ fontSize: 'medium',margin:'0px' }}>HELLO DOE</p>
+              <p style={{ fontSize: 'small' ,margin:'0px'}}>12 Oct 2022</p>
+            </div>
           </Typography>
+          <Box sx={{ flexGrow: 0.1 }} />
+
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -178,11 +176,7 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            
             <IconButton
               size="large"
               aria-label="show 17 new notifications"

@@ -28,19 +28,29 @@ const LinerChart = () => {
         },
     };
     return (
+        // <>
 
         <Box
             id='cards'
+            className='lineragraph'
             sx={{
                 backgroundColor: 'black',
-                '&:hover': {
-                    backgroundColor: 'primary.main',
-                    opacity: [0.9, 0.8, 0.7],
-                },
+         
             }}
         >
-            <Line {...config} />;
+            {/* <h5>Recent Activities</h5> */}
+            <Line {...config} className='graphcolour'/>
+            <div className='lineargraph-content'>
+                <h5>WEE KLY</h5>
+                <div>
+                    <p style={{fontSize:'10px'}}>This Week<br/>+72%</p>
+                    <p style={{fontSize:'10px'}}>Last Week<br/>+60%</p>
+                </div>
+            </div>
+
         </Box>
+        // </>
+
     )
 };
 
