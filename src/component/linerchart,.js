@@ -1,57 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Line } from '@ant-design/plots';
-import { Box } from '@mui/material'
-const LinerChart = () => {
-    const [data, setData] = useState([]);
+import { Area } from '@ant-design/plots';
+import { Box } from '@mui/system';
 
-    useEffect(() => {
-        asyncFetch();
-    }, []);
+export default function LinerChart (){
+  const [data, setData] = useState([]);
 
-    const asyncFetch = () => {
-        fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json')
-            .then((response) => response.json())
-            .then((json) => setData(json))
-            .catch((error) => {
-                console.log('fetch data failed', error);
-            });
-    };
-    const config = {
-        data,
-        padding: 'auto',
-        xField: 'Date',
-        yField: 'scales',
-        xAxis: {
-            // type: 'timeCat',
-            tickCount: 5,
-        },
-    };
-    return (
-        // <>
+  useEffect(() => {
+    asyncFetch();
+  }, []);
 
-        <Box
-            id='cards'
-            className='lineragraph'
-            sx={{
-                backgroundColor: 'black',
-         
-            }}
-        >
-            {/* <h5>Recent Activities</h5> */}
-            <Line {...config} className='graphcolour'/>
-            <div className='lineargraph-content'>
-                <h5>WEE KLY</h5>
-                <div>
-                    <p style={{fontSize:'10px'}}>This Week<br/>+72%</p>
-                    <p style={{fontSize:'10px'}}>Last Week<br/>+60%</p>
-                </div>
-            </div>
+  const asyncFetch = () => {
+    fetch('https://gw.alipayobjects.com/os/bmw-prod/360c3eae-0c73-46f0-a982-4746a6095010.json')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => {
+        console.log('fetch data failed', error);
+      });
+  };
+  const config = {
+    data,
+    xField: 'timePeriod',
+    yField: 'value',
+    xAxis: {
+      range: [0, 1],
+    },
+    yAxis:false,
 
-        </Box>
-        // </>
+  };
 
-    )
+  return(
+    <Box
+    id='cards'
+    className='lineragraph'
+    sx={{
+ 
+    }}
+>
+    {/* <h5>Recent Activities</h5> */}
+    <Area {...config} className='graphcolour'/>
+    {/* <Line {...config} /> */}
+    <div className='lineargraph-content'>
+        <h5>WEE KLY</h5>
+        <div>
+            <p style={{fontSize:'10px'}}>This Week<br/>+72%</p>
+            <p style={{fontSize:'10px'}}>Last Week<br/>+60%</p>
+        </div>
+    </div>
+
+</Box>
+    
+      
+      )
 };
-
-export default LinerChart

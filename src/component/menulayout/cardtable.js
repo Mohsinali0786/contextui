@@ -32,14 +32,14 @@ export default function cardtable(props) {
     className='cards card-width-3'
     sx={{
     // overflow:'scroll',
-      backgroundColor: 'black',
+    backgroundColor: 'hsl(232deg 18% 9%)',
+
  
     }}
   >
     <div className='recentfiles-header'>
 
     <h3 style={{color:'white',textAlign:'left'}}>{title}</h3>
-    {/* <SearchIcon sx={{position:'relative',left:'50px',top:'5px',color:'white'}}/> */}
     <input placeholder='Search...'/>
     </div>
     {/* <table bor>
@@ -68,9 +68,9 @@ export default function cardtable(props) {
       <Table sx={{ minWidth: 330 }} aria-label="simple table" >
         <TableHead>
           <TableRow>
-            <TableCell>File Name</TableCell>
-            <TableCell >{heading1}</TableCell>
-            <TableCell >{heading2}</TableCell>
+            <TableCell className='table-heading-border'>File Name</TableCell>
+            <TableCell className='table-heading-border'>{heading1}</TableCell>
+            <TableCell className='table-heading-border'>{heading2}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

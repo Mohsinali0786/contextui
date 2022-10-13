@@ -22,7 +22,7 @@ function Card(props) {
 
         //   },
         // height: 170,
-        backgroundColor: 'black',
+        backgroundColor: 'hsl(232deg 18% 9%)',
 
       }}
     >

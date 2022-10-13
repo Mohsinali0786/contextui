@@ -24,6 +24,7 @@ import Chart from '../chart'
 import LinerChart from '../linerchart,';
 // import {Divider} from '@mui/material';
 import Divider from '@mui/material/Divider';
+import DragDrop from '../fileuploader';
 
 
 const { Header, Sider, Content } = Layout;
@@ -32,7 +33,7 @@ function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed} width={!collapsed ? '150px' : '50px'}>
+      <Sider trigger={null} className='mysidebar' collapsible collapsed={collapsed} width={!collapsed ? '150px' : '50px'} >
         <Header
           className="site-layout-background"
           style={{
@@ -119,7 +120,7 @@ function SideMenu() {
 
       </Sider>
 
-      <Layout className="site-layout" style={{marginLeft:!collapsed?'150px':'80px'}}>
+      <Layout className="site-layout slidemobileview"  style={{marginLeft:!collapsed?'150px':'80px'}}>
         <PrimarySearchAppBar />
         <Content
           className="site-layout-background"
@@ -129,6 +130,9 @@ function SideMenu() {
             minHeight: 280,
           }}
         >
+          {/* <div> */}
+            <DragDrop/>
+          {/* </div> */}
           <Stack className='cards-div' direction={{ xs: 'column', sm: 'row' }}
             // spacing={{ xs: 1, sm: 2, md: 4 }}
             >

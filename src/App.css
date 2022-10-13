@@ -1,7 +1,6 @@
 /* .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,6 +38,28 @@
  */
 
 
+*{
+  /* background-color: hsl(232deg 18% 9%) !important; */
+
+}
+
+body{
+  background-color: hsl(232deg 18% 9%) !important;
+
+}
+table *{
+  border-bottom:none !important; 
+  /* font-size: 20px; */
+}
+.table-heading-border{
+  /* background-color: red; */
+  border-bottom: 1px solid hsl(201deg 29% 26%) !important;
+}
+.css-1q1u3t4-MuiTableRow-root{
+  /* color: #1890ff !important;
+  background-color: white !important; */
+
+}
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -57,10 +78,10 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-.site-layout .site-layout-background {
-  /* background: #fff; */
-}
 
+.mysidebar *{
+  background-color:hsl(240deg 14% 13%) !important; 
+}
 .ant-layout-sider {
   position: fixed !important ;
   left: 0 !important;
@@ -118,7 +139,7 @@
 }
 
 .graphcolour {
-  background-color: black !important;
+  background-color: hsl(232deg 18% 9%);
   width: 70%;
 
 }
@@ -144,7 +165,7 @@
 }
 
 .site-layout {
-  background-color: rgb(33, 33, 33) !important;
+  background-color: hsl(232deg 18% 9%) !important;
 }
 
 .ant-progress {
@@ -233,13 +254,16 @@
 /* .totalfiles-Card>h4{
   margin-left:5px ; 
 } */
-.tables>* {
-  background-color: black;
+.tables>* {        
+  background-color: hsl(232deg 18% 9%);
+  min-width: 100% !important;
+
 }
 
 .recentfiles-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding:0% 4%
   /* flex-direction: row; */
 }
 
@@ -247,7 +271,7 @@
   background-color: #282c34;
   border-radius: 100px;
   color: white;
-  width: 56%;
+  width: 40%;
   height: 30px;
   padding: 5px 20px;
 }
@@ -256,7 +280,13 @@
   color: white;
 }
 
-.MuiTableCell-root {
+/* .MuiTableCell-root {
+  color: white ;
+} */
+thead *{
+  color: hsl(192deg 32% 45%) !important;
+}
+tbody *{
   color: white !important;
 }
 
@@ -277,8 +307,25 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
-
+/* .dragAndDrop{
+  background-color: red !important;
+} */
+.drapAndDrop-Main-Div{
+  margin-left:35%;
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.drapAndDrop-Main-Div>button{
+  margin-left: 20%;
+}
+.create-project{
+  background-color:hsl(191deg 32% 48%) !important;
+  width: 210px;
+  height: 50px;
+}
 @media only screen and (max-width: 1050px) {
 
   /* .ant-progress-circle
@@ -354,9 +401,63 @@
   .lineargraph-content {
     width: 20%;
   }
+  thead  *{
+    text-align: center !important;
+    font-size: 2vw !important;
+
+  }
+  tbody  *{
+    text-align: center !important;
+    font-size: 1.5vw !important;
+  }
+  thead tr *{
+    padding: 10px !important; 
+    /* line-height: 5px !important; */
+  }
+  tbody tr *{
+    padding: 10px !important;      
+    /* line-height: 5px !important; */
+  }
 }
 
+@media only screen and (max-width: 900px) {
+  .drapAndDrop-Main-Div{
+    margin-left:0%;
+    text-align:center;
+    display:flex;
+    justify-content:space-evenly;
+    margin-top: 30px;
+  }
+  .drapAndDrop-Main-Div >div{
+    margin-bottom: 20px;
+  }
+  .drapAndDrop-Main-Div >button{
+    margin-left: 0%;
+  }
+}
 @media only screen and (max-width: 600px) {
+
+  thead  *{
+    font-size: smaller !important;
+  }
+  tbody  *{
+    font-size: smaller !important;
+  }
+  thead tr *{
+    line-height: 0px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+
+  }
+  tbody tr *{
+    padding-top: 10px !important;  
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    line-height: 0px !important;
+
+  }
   .cards-div {
     text-align: center;
     align-items: center;
@@ -404,4 +505,19 @@
   .headeroicon{
     width:100%
   } */
+  .drapAndDrop-Main-Div{
+    margin-left:0%;
+    text-align:center;
+    display:block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .slidemobileview{
+    margin-left: 80px !important;
+    /* z-index: 0; */
+  }
+  .ant-layout-sider{
+    z-index: 1;
+  }
 }

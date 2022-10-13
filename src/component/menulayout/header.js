@@ -51,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '70ch',
+      width: '60ch',
     },
   },
 }));
@@ -149,7 +149,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: 'black',height:'55px' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'hsl(232deg 18% 9%) ',height:'55px' }}>
         <Toolbar>
 
           <Typography

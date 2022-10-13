@@ -44,6 +44,8 @@ const Chart = () => {
     data,
     xField: 'type',
     yField: 'value',
+    yAxis:false,
+
     seriesField: '',
     color: ({ type }) => {
       if (type === '10-30分' || type === '30+分') {
@@ -84,7 +86,8 @@ const Chart = () => {
 
       //   },
       // height: 170,
-      backgroundColor: 'black',
+      backgroundColor: 'hsl(232deg 18% 9%)',
+
 
     }}
   >
