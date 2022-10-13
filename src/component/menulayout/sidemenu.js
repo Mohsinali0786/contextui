@@ -7,12 +7,10 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import React, { useState } from 'react';
-import Card from './card';
+import Card from '../card/card';
 import { Stack } from '@mui/material';
 import 'antd/dist/antd.css'
-import PrimarySearchAppBar from './header'
 import TableRowsIcon from '@mui/icons-material/TableRows';
-import CardTable from './cardtable'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
 import DonutSmallIcon from '@mui/icons-material/DonutSmall';
@@ -20,11 +18,13 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 import LanIcon from '@mui/icons-material/Lan';
-import Chart from '../chart'
-import LinerChart from '../linerchart,';
-// import {Divider} from '@mui/material';
 import Divider from '@mui/material/Divider';
-import DragDrop from '../fileuploader';
+import PrimarySearchAppBar from './header'
+import CardTable from '../card/cardtable'
+import Chart from '../charts/chart'
+import LinerChart from '../charts/linerchart,';
+import DragDrop from '../fileUploader/fileuploader';
+// import {Divider} from '@mui/material';
 
 
 const { Header, Sider, Content } = Layout;

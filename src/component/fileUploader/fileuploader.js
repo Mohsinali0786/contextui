@@ -16,7 +16,7 @@ function DragDrop() {
             <FileUploader onDrop={(file)=>{console.log('my files',file)}} handleChange={handleChange} name="file" types={fileTypes} className='dragAndDrop'>
                 <AddIcon sx={{ color: 'white' }} />
                 <h5 style={{ color: 'white',fontSize:'larger' }}>Drag And Drop or Click to upload files here</h5>
-                <Button variant="outlined" sx={{color:'white'}}>Upload or Drop your Files</Button>
+                <Button variant="outlined" className='uploadFilesBtn'>Upload or Drop your Files</Button>
             </FileUploader>
             </div>
             <Button variant='contained' className='create-project'>Create Project</Button>

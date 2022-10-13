@@ -1,65 +1,15 @@
-/* .App {
-  text-align: center;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
- */
-
-
-*{
-  /* background-color: hsl(232deg 18% 9%) !important; */
-
-}
-
 body{
   background-color: hsl(232deg 18% 9%) !important;
 
 }
 table *{
   border-bottom:none !important; 
-  /* font-size: 20px; */
 }
 .table-heading-border{
   /* background-color: red; */
   border-bottom: 1px solid hsl(201deg 29% 26%) !important;
 }
-.css-1q1u3t4-MuiTableRow-root{
-  /* color: #1890ff !important;
-  background-color: white !important; */
 
-}
 #components-layout-demo-custom-trigger .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -127,25 +77,23 @@ table *{
   border-radius: 5px;
   padding: 5px;
   margin: 0% 1%;
+  background-color:hsl(232deg 18% 9%)
 }
 
 .lineragraph {
-  /* width: 40% !important; */
+  width: 30% !important;
   height: 180px !important;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  /* flex-direction: column; */
   background-color: whitesmoke !important;
 }
 
-.graphcolour {
-  background-color: hsl(232deg 18% 9%);
-  width: 70%;
-
+.graphcolour {  
+  background-color: hsl(231deg 8% 18%);
+  width: 60%;
+  height: 170px !important;
 }
-
-
-
 .card-width-3 {
   width: 32%;
   margin: 0% 1%;
@@ -155,9 +103,9 @@ table *{
   border-radius: 5px;
   padding-top: 10px;
   overflow: hidden;
+  background-color: hsl(231deg 8% 18%);
 
 }
-
 .card-width-3>h4 {
   color: white;
   font-size: large;
@@ -297,15 +245,16 @@ tbody *{
 }
 
 .lineargraph-content {
-  width: 25%;
-  height: 170px;
+  margin-left: 2%;
+  width: 35%;
+  /* height: 170px; */
 
 }
 
 .lineargraph-content-div {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
 }
 /* .dragAndDrop{
   background-color: red !important;
@@ -325,9 +274,46 @@ tbody *{
   background-color:hsl(191deg 32% 48%) !important;
   width: 210px;
   height: 50px;
+  width: 200px;
+}
+.DemoColumnChart{
+  width:50px !important;
+  height: 40px !important;
+}
+.togglebtn-div{
+  display: flex;
+}
+.togglebtn-div > p{
+  font-size: 1vh; 
+  margin-left: 5px; 
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+.column3chart-div{
+  margin-top: 10px;
+  display: flex;
+}
+.column3chart-div>p{
+  max-width:50px;
+  font-size:1vw;
+  /* font-size: 1vh;  */
+  overflow:hidden;
+  text-overflow:ellipsis;
+  overflow-wrap:break-word;
+}
+.uploadFilesBtn{
+  color:white !important;
+  border:1px solid white !important;
 }
 @media only screen and (max-width: 1050px) {
 
+
+  .togglebtn-div > p{
+    font-size: 1vw; 
+    /* margin-left: 5px;  */
+  }
+  
   /* .ant-progress-circle
   {
     
@@ -399,7 +385,7 @@ tbody *{
   }
 
   .lineargraph-content {
-    width: 20%;
+    width: 40%;
   }
   thead  *{
     text-align: center !important;
@@ -412,15 +398,17 @@ tbody *{
   }
   thead tr *{
     padding: 10px !important; 
-    /* line-height: 5px !important; */
   }
   tbody tr *{
     padding: 10px !important;      
-    /* line-height: 5px !important; */
   }
 }
 
 @media only screen and (max-width: 900px) {
+
+  .column3chart-div>p{
+    font-size:1vh;
+  }
   .drapAndDrop-Main-Div{
     margin-left:0%;
     text-align:center;
@@ -434,6 +422,10 @@ tbody *{
   .drapAndDrop-Main-Div >button{
     margin-left: 0%;
   }
+  .recentfiles-header{
+    justify-content: space-evenly;
+  }
+
 }
 @media only screen and (max-width: 600px) {
 
@@ -513,6 +505,7 @@ tbody *{
 }
 
 @media only screen and (max-width: 500px) {
+
   .slidemobileview{
     margin-left: 80px !important;
     /* z-index: 0; */

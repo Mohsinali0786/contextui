@@ -9,8 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
+import AppsRoundedIcon from '@mui/icons-material/AppsRounded';import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -119,7 +118,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      
+
       <MenuItem>
         <IconButton
           size="large"
@@ -144,12 +143,21 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      <MenuItem>
+        <IconButton
+          // size="large"
+          color="inherit"
+        >
+            <AppsRoundedIcon />
+        </IconButton>
+        <p style={{marginTop:'15px'}}>Setting</p>
+      </MenuItem>
     </Menu>
   );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: 'hsl(232deg 18% 9%) ',height:'55px' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'hsl(232deg 18% 9%) ', height: '55px' }}>
         <Toolbar>
 
           <Typography
@@ -159,8 +167,8 @@ export default function PrimarySearchAppBar() {
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             <div>
-              <p style={{ fontSize: 'medium',margin:'0px' }}>HELLO DOE</p>
-              <p style={{ fontSize: 'small' ,margin:'0px'}}>12 Oct 2022</p>
+              <p style={{ fontSize: 'medium', margin: '0px' }}>HELLO DOE</p>
+              <p style={{ fontSize: 'small', margin: '0px' }}>12 Oct 2022</p>
             </div>
           </Typography>
           <Box sx={{ flexGrow: 0.1 }} />
@@ -176,7 +184,16 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            
+
+
+            {/* <MenuIcon /> */}
+            <IconButton
+              size="large"
+              color="inherit"
+            >
+              <AppsRoundedIcon />
+            </IconButton>
+
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
