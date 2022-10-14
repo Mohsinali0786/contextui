@@ -1,4 +1,4 @@
-body{
+.ant-layout-has-sider{
   background-color: hsl(232deg 18% 9%) !important;
 
 }
@@ -148,6 +148,9 @@ table *{
   /* justify-content: space-evenly; */
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: hsl(231deg 8% 18%);
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 .progress-report>p {
@@ -168,16 +171,20 @@ table *{
 
 /* hehhehe */
 .progress-report-parent-div {
-  width: 70%;
-  margin-left: 20%;
+  width: 60%;
+  margin-left: 5%;
   /* text-align: center; */
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.progress-report div{
+  position: relative;
+  top:5px;
+}
 
 .progressDiv {
   /* background-color: red; */
-  width: 100px;
+  width: 40%;
   text-align: center;
 }
 

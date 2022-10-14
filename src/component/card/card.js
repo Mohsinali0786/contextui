@@ -38,20 +38,28 @@ function Card(props) {
             width='100'
           />
         </div>
-          <div className="progress-report-parent-div">
-            <div className="progress-report">
-              <SquareIcon sx={{color:'lightblue'}} />
-              <p style={{color:'white'}}>{content1}</p>
+        <div className="progress-report-parent-div">
+          <div className="progress-report">
+            <div>
+              <SquareIcon sx={{ color: 'lightblue' }} />
             </div>
-            <div className="progress-report">
-              <SquareIcon sx={{color:'lightblue'}}/>
-              <p style={{color:'white'}}>{content2}</p>
-            </div>
-            <div style={{display:'flex'}}>
-              <p style={{color:'white'}}>75%</p>
-              <ArrowDropUpIcon sx={{color:'green'}}/>  
+            <div>
+              <p style={{ color: 'white' }}>{content1}</p>
             </div>
           </div>
+          <div className="progress-report">
+            <div>
+              <SquareIcon sx={{ color: 'hsl(214deg 4% 31%)' }} />
+            </div>
+            <div>
+              <p style={{ color: 'white' }}>{content2}</p>
+            </div>
+          </div>
+          <div style={{ display: 'flex' }}>
+            <p style={{ color: 'white' }}>75%</p>
+            <ArrowDropUpIcon sx={{ color: 'green' }} />
+          </div>
+        </div>
       </div>
 
 
