@@ -1,6 +1,8 @@
+.body{
+  background-color: hsl(232deg 18% 9%) !important;
+}
 .ant-layout-has-sider{
   background-color: hsl(232deg 18% 9%) !important;
-
 }
 table *{
   border-bottom:none !important; 
