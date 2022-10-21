@@ -1,4 +1,4 @@
-.body{
+body{
   background-color: hsl(232deg 18% 9%) !important;
 }
 .ant-layout-has-sider{
@@ -315,6 +315,15 @@ tbody *{
   color:white !important;
   border:1px solid white !important;
 }
+
+
+@media only screen and (min-width: 1750px) {
+  .ant-progress-inner{
+    width: 60% !important;
+  }
+}
+
+
 @media only screen and (max-width: 1050px) {
 
 
@@ -322,7 +331,10 @@ tbody *{
     font-size: 1vw; 
     /* margin-left: 5px;  */
   }
-  
+
+  .ant-progress-inner{
+    width: 70% !important;
+  }
   /* .ant-progress-circle
   {
     
